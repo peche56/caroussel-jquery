@@ -6,6 +6,8 @@ jQuery(document).ready(function() {
     $imgVisible = $img.eq(i);
     var $prev = $('#prev');
     var $next = $('#next');
+
+
     // $( "img" ).not("imgVisible").hide();
 
 
@@ -21,10 +23,10 @@ jQuery(document).ready(function() {
         $img.css('display', 'none');
         $imgVisible = $img.eq(i);
         $imgVisible.css('display', 'block');
-
-        if (i > nombreImg) {
-            i = 0;
+        if (i >= nombreImg) {
+          i = 0;
         }
+
     });
 
     $prev.click(function() {
@@ -42,10 +44,10 @@ jQuery(document).ready(function() {
 
     var autorun = setInterval(function() {
 
-        if (i > nombreImg) {
-          i = 0;
+        if (i < nombreImg) {
+          i++;
         } else {
-            i++;
+            i = 0;
         }
 
         $img.css('display', 'none');
