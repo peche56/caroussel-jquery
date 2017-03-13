@@ -1,0 +1,14 @@
+img {
+    position: absolute;
+    top: 0;
+  
+    height: 200px;
+    width: 700px;
+    margin: auto;
+}
+
+button {
+    background-color: skyblue;
+    color: white;
+    border-radius: 100%;
+}
